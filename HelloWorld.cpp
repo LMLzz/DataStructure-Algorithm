@@ -1,4 +1,4 @@
-// for test
+// test github
 #include<iostream>
 using namespace std;
 int main(){
