@@ -32,7 +32,7 @@ protected:
 //	void quickSort(Rank lo, Rank hi);
 //	void heapSort(Rank lo, Rank hi);
 public:
-	//构造函数
+	// 构造函数
 	Vector (int c = DEFAULT_CAPACITY, int s = 0, T v = 0){ //容量为c、规模为s、所有元素初始为v
 		_elem = new T[_capacity = c];
 		for(_size = 0; _size < s; _elem[_size++] = v);
@@ -46,18 +46,18 @@ public:
 	Vector(Vector<T> const& V){
 		copyFrom(V._elem, 0, V._size);
 	}
-	//析构函数
+	// 析构函数
 	~Vector(){ delete [] _elem;}
-	//读
+	// 读
 	Rank size() const {
 		return _size;
 	}
 	bool empty() const {
-        return !_size;
-    }
+        	return !_size;
+	}
+	// 可写访问接口
+	Vector<T> & operator= (Vector<T> const&);
 }
-
-
 
 #include "vector_implementation.h"
 #endif
