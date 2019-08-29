@@ -18,6 +18,7 @@ protected:
 	Rank _size;		//设置规模
 	int _capacity;	//设置容量
 	T* _elem;		//数据区
+
 	void copyFrom (T const* A, Rank lo, Rank hi);
 //	void expand();	//用于容量扩充
 //	void shrink();	//装填因子小时压缩
@@ -56,15 +57,7 @@ public:
     }
 }
 
-template<typename T>  //元素类型
-void Vector<T>::copyFrom(T const*A, Rank lo, Rank hi){
-    capacity = 2 * ( hi - lo );
-    _elem = new T[_capacity];
-    _size = 0;
-    while( lo < hi){
-        _elem[size++] = A[lo++];
-    }
-}
+
 
 #include "vector_implementation.h"
 #endif
