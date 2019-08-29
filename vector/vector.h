@@ -66,4 +66,5 @@ void Vector<T>::copyFrom(T const*A, Rank lo, Rank hi){
     }
 }
 
+#include "vector_implementation.h"
 #endif

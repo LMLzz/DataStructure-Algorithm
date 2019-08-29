@@ -10,7 +10,8 @@
 
 template <typename T> 
 void Vector<T>::expand(){
-    if(_size < _capacity)//尚未满员时，无需扩容
+    // 尚未满员时，无需扩容
+    if(_size < _capacity)
         return;
     if(_capacity < DEFAULT_CAPACITY)
         _capacity = DEFAULT_CAPACITY;
