@@ -11,17 +11,16 @@
 template <typename T> 
 void Vector<T>::expand(){
     // 尚未满员时，无需扩容
-    if(_size < _capacity)
+    if (_size < _capacity)
         return;
-    if(_capacity < DEFAULT_CAPACITY)
+    if (_capacity < DEFAULT_CAPACITY)
         _capacity = DEFAULT_CAPACITY;
 
     T* odlElem = _elem;
     _elem = new T[_capacity << 1];
     //复制原向量内容
-    for(int i = 0; i < _size; i++)
+    for ( int i = 0; i < _size; i++ )
         _elem[i] = oldElem[i];
     delete [] oldElem;
 }
-
 #endif
